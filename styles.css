@@ -1,0 +1,996 @@
+/* تنظیمات عمومی */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Sahel;
+  direction: rtl;
+}
+
+@font-face {
+  font-family: FontName;
+  src: url("Sahel.eot");
+  src: url("Sahel.eot?#iefix") format("Sahel-opentype"),
+    url("Sahel.woff") format("woff"), url("Sahel.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: white;
+  position: relative;
+  border-radius: 0px 0px 20px 20px;
+  box-shadow: 0px 0px 15px -3px #ffd808d4;
+}
+
+.header-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+  /* margin-left: 100px; */
+  margin-right: 10px;
+}
+
+.center-text p {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.icons .icon {
+  margin-left: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icons {
+  direction: ltr;
+  gap: 5px;
+}
+/* منوی همبرگری */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  width: 25px;
+  height: 3px;
+  background-color: #151515;
+  margin: 4px 0;
+}
+
+/* منوی موبایل */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #444;
+  z-index: 1000;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 10px;
+}
+
+.mobile-menu ul li {
+  margin: 10px 0;
+}
+
+.mobile-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+.header-width {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.center-text {
+  position: absolute;
+  left: 40%;
+}
+
+/* تنظیمات ریسپانسیو */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .header {
+    justify-content: space-between;
+    position: relative;
+    padding: 14px 15px;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+  .center-text {
+    left: 30%;
+  }
+  .logo {
+    position: absolute;
+    left: 3%;
+  }
+}
+@media (max-width: 950px) {
+  .center-text {
+    left: 33%;
+  }
+}
+
+/* /*  !-------- Slider --------  */
+
+.gradient-section {
+  width: 100%;
+  background-color: #0e0e0e;
+  background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(20, 20, 20, 1) 100%
+    ),
+    url("https://www.transparenttextures.com/patterns/dark-mosaic.png"); /* طرح بک‌گراند */
+  background-blend-mode: overlay;
+  display: flex;
+  align-items: center; /* مرکز‌چینی عمودی */
+  justify-content: center; /* مرکز‌چینی افقی */
+  direction: ltr;
+  padding: 100px 0px;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between; /* تقسیم بخش‌ها به دو طرف */
+  align-items: center; /* مرکز‌چینی عمودی */
+  gap: 20px; /* فاصله بین بخش‌ها */
+  width: 100%;
+  max-width: 1050px; /* حداکثر عرض */
+}
+.hero-section {
+  max-width: 1200px; /* حداکثر عرض */
+  margin: 20px auto; /* فاصله از بالا و مرکز */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* تقسیم بخش‌ها به دو طرف */
+  align-items: center; /* مرکز‌چینی عمودی */
+  margin-top: 100px;
+}
+.hero-section {
+  max-width: 1200px; /* حداکثر عرض */
+  margin: 0 auto; /* وسط‌چینی */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* تقسیم بخش‌ها به دو طرف */
+  align-items: center; /* مرکز‌چینی عمودی */
+}
+.hero-container {
+  display: flex;
+  width: 100%;
+  gap: 330px;
+  align-items: center;
+}
+
+.hero-left,
+.hero-right {
+  /* هر بخش 50% عرض صفحه */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* مرکز‌چینی عمودی */
+  align-items: center; /* مرکز‌چینی افقی */
+  position: relative; /* برای قرار دادن شیشه بلوری */
+}
+.static-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff; /* رنگ متن ثابت */
+  font-family: Sahel;
+}
+
+.dynamic-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff; /* رنگ متن پویا */
+  font-family: Sahel;
+}
+
+.hero-right {
+  position: relative;
+  width: 30%;
+  direction: rtl;
+}
+
+.hero-image {
+  max-width: 60%; /* حداکثر عرض تصویر */
+  height: auto; /* حفظ نسبت ابعاد */
+  border-radius: 8px; /* گردی گوشه‌ها */
+  position: relative; /* برای قرار دادن شیشه بلوری */
+  z-index: 2; /* تصویر بالاتر از شیشه بلوری */
+  box-shadow: 0px 0px 29px -5px #ffd70057;
+  margin-left: -200px;
+}
+
+.text-animation {
+  font-family: iransansweb; /* شبیه تگ <pre> برای حفظ فضاها */
+  white-space: pre; /* حفظ فضاهای خالی و موقعیت کلمات */
+  font-size: 24px;
+  font-weight: bold;
+  color: #39ff14; /* رنگ متن */
+  text-align: center; /* متن وسط‌چین */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+}
+.cursor {
+  animation: blink 1s infinite; /* انیمیشن علامت نوشتن */
+  margin-left: 5px; /* فاصله از متن */
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1; /* قابل مشاهده */
+  }
+  50% {
+    opacity: 0; /* نامرئی */
+  }
+}
+
+.hero-button {
+  background-color: #a27f18; /* رنگ پس‌زمینه سبز */
+  color: #fff; /* رنگ متن */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 50px; /* گردی کامل */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 160px;
+  font-family: Sahel;
+}
+
+.hero-button:hover {
+  background-color: #cba227; /* رنگ روشن‌تر در هاور */
+}
+
+/* واکنش‌گرایی */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column; /* قرار دادن بخش‌ها زیر هم */
+    align-items: center; /* مرکز‌چینی افقی */
+    justify-content: center;
+  }
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+  .hero-left::after {
+    left: 10%;
+  }
+  .text-animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+  }
+  .static-text {
+    position: absolute;
+    top: 0;
+  }
+
+  .hero-left,
+  .hero-right {
+    flex: unset; /* حذف تنظیمات فلکس */
+    width: 100%; /* تمام عرض */
+    margin-bottom: 20px; /* فاصله بین بخش‌ها */
+    position: relative;
+  }
+}
+@media (min-width: 769px) and (max-width: 950px) {
+  .hero-container {
+    gap: 150px;
+  }
+}
+
+/* استایل بخش انیمیشن متن */
+.cursor {
+  animation: blink 1s infinite; /* انیمیشن علامت نوشتن */
+  margin-left: 5px; /* فاصله از متن */
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1; /* قابل مشاهده */
+  }
+  50% {
+    opacity: 0; /* نامرئی */
+  }
+}
+@media (max-width: 430px) {
+  .hero-image {
+    max-width: 60%;
+    margin-left: 0px;
+  }
+  .hero-left {
+    margin-top: 0px;
+  }
+  .center-text {
+    left: 35%;
+  }
+}
+@media (min-width: 430px) and (max-width: 768px) {
+  .hero-left {
+    margin-top: 00px;
+  }
+  .hero-image {
+    max-width: 60%;
+    margin-left: 0px;
+  }
+  .center-text {
+    left: 38%;
+  }
+}
+@media (min-width: 770px) and (max-width: 1150px) {
+  .hero-container {
+    gap: 0;
+  }
+  .hero-right {
+    margin-right: 70px;
+  }
+}
+/* !------------------- Line Style ------------------- */
+/* استایل خط جداکننده */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* فاصله بین خطوط و متن */
+  margin: 53px 0;
+  margin-top: 53px;
+  margin-top: -30px;
+}
+
+.divider-line {
+  flex: 1; /* خطوط به صورت گسترش‌یافته */
+  height: 1px; /* ضخامت خط */
+  background-color: #ffd700; /* رنگ خط سبز درخشان */
+}
+
+.divider-text {
+  font-family: "iransansweb", sans-serif;
+  font-size: 18px;
+  color: #ffd700; /* رنگ متن سبز درخشان */
+  white-space: nowrap; /* جلوگیری از شکستن متن */
+}
+
+/* !__---------------------------- */
+/* تنظیمات بخش گالری */
+.custom-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* وسط‌چین کردن */
+  gap: 20px; /* فاصله بین div ها */
+  padding: 20px;
+  font-family: Sahel;
+  box-shadow: inset 0px 0px 30px 10px gray;
+  box-shadow: inset 0px 0px 5px 12px #000000fc;
+  margin-top: -52px;
+  padding: 50px;
+}
+
+.custom-item {
+  background-color: #fff; /* زمینه خاکستری روشن */
+  border: 1px solid #ddd; /* خط دور div */
+  border-radius: 5px; /* گردی گوشه‌ها */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* سایه برجسته */
+  width: calc(17% - 15px);
+  text-align: center;
+  padding: 20px 0px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* افکت هاور */
+  opacity: 0.9;
+}
+.custom-item:hover {
+  opacity: 1;
+}
+.custom-item:hover {
+  transform: translateY(-5px); /* بالا رفتن در حالت هاور */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* سایه قوی‌تر در حالت هاور */
+}
+
+.custom-item img {
+  width: 55%;
+  height: auto;
+  border-radius: 5px; /* گردی گوشه‌های عکس */
+}
+
+.custom-item h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  font-family: Sahel;
+}
+
+.custom-item p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  font-family: Sahel;
+}
+
+.custom-button {
+  font-family: Sahel;
+  background-color: #cba227; /* رنگ آبی برای دکمه */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #b0870b; /* تیره‌تر شدن رنگ دکمه در حالت هاور */
+}
+
+/* تنظیمات ریسپانسیو برای تبلت و موبایل */
+@media (max-width: 768px) {
+  .custom-item {
+    width: calc(50% - 20px); /* دو div در هر ردیف */
+    opacity: 1;
+  }
+  .custom-gallery {
+    box-shadow: inset 0px 0px 20px 5px #040404;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-item {
+    width: calc(95% - 35px); /* یک div در هر ردیف */
+  }
+}
+
+/*  */
+
+/* تنظیمات بخش درباره ما */
+.custom-about {
+  display: flex;
+  justify-content: center; /* وسط‌چین کردن */
+  align-items: center;
+  min-height: 100vh; /* ارتفاع کامل صفحه */
+  background-color: #0e0e0e;
+  background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(20, 20, 20, 1) 100%
+    ),
+    url("https://www.transparenttextures.com/patterns/dark-mosaic.png"); /* طرح بک‌گراند */
+  background-blend-mode: overlay;
+  padding: 20px;
+  padding-bottom: 100px;
+}
+
+.custom-about-container {
+  background-color: #ffffff; /* زمینه سفید برای کانتینر */
+  border-radius: 10px; /* گردی گوشه‌ها */
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2); /* سایه طلایی کم */
+  padding: 30px;
+  max-width: 800px; /* حداکثر عرض */
+  text-align: justify; /* متن justify */
+  margin-top: 55px;
+}
+
+.custom-about-container p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333; /* رنگ متن */
+  margin-bottom: 20px;
+}
+
+.custom-download-link {
+  display: flex;
+  background-color: #ffd700; /* رنگ طلایی */
+  color: #333; /* رنگ متن لینک */
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* گردی گوشه‌ها */
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-download-link:hover {
+  background-color: #e6b800; /* تیره‌تر شدن رنگ طلایی */
+  transform: scale(1.05); /* بزرگ‌تر شدن در حالت هاور */
+}
+
+/* */
+
+.line-margin {
+  margin: -36px 0;
+  margin-top: -36px;
+  margin-top: -12px;
+  margin-top: -7px;
+  font-family: Sahel;
+}
+/*  */
+
+/* Style for the new section */
+.social-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff; /* White background */
+  padding: 20px 0;
+  padding-bottom: 65px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between icons */
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Responsive wrapping */
+}
+
+.icon-button {
+  text-decoration: none;
+  color: #fff;
+  background-color: #fff; /* Default icon color */
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Circular shape */
+  box-shadow: 0px 2px 6px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth animation */
+}
+
+.icon-button:hover {
+  transform: scale(1.2); /* Enlarge on hover */
+}
+
+/* Specific colors for each social media icon */
+.instagram {
+  background-color: #fff;
+}
+.twitter {
+  background-color: #fff;
+}
+.facebook {
+  background-color: #fff;
+}
+.linkedin {
+  background-color: #fff;
+}
+.telegram {
+  background-color: #fff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .icon-button {
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+  }
+  .social-icons {
+    gap: 15px;
+  }
+}
+.social-line {
+  margin-top: -42px;
+}
+
+.social-line--text {
+  font-family: Sahel;
+}
+
+/*  */
+
+/* Style for the main container */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 10px;
+}
+
+/* Top Section */
+.top-section {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+/* Middle Section */
+.middle-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.text-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  color: #555555;
+}
+
+.text-item .icon {
+  color: #28a745; /* Green checkmark */
+  font-size: 20px;
+}
+
+/* Bottom Section */
+.bottom-section {
+  text-align: center;
+  font-size: 16px;
+  color: #333333;
+}
+
+.bottom-section .join-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue button */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.bottom-section .join-link:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+.main-contect {
+  width: 100%;
+  background-color: #0e0e0e;
+  background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(20, 20, 20, 1) 100%
+    ),
+    url("https://www.transparenttextures.com/patterns/dark-mosaic.png"); /* طرح بک‌گراند */
+  background-blend-mode: overlay;
+  padding: 70px 0px;
+  padding-bottom: 50px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-section {
+    font-size: 18px;
+  }
+
+  .text-item {
+    font-size: 14px;
+  }
+
+  .text-item .icon {
+    font-size: 18px;
+  }
+
+  .bottom-section {
+    font-size: 14px;
+  }
+
+  .bottom-section .join-link {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  .main-container {
+    width: 90%;
+  }
+}
+
+.diver-number {
+  margin: -29px 0;
+  margin-top: -29px;
+  margin-top: -33px;
+  margin-top: 9px;
+  font-family: Sahel;
+  font-size: 18px;
+  color: #ffd700;
+  white-space: nowrap;
+}
+
+/*  */
+
+/* General Styles */
+.articles-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 0px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  padding: 10px 0px;
+  margin-top: 30px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+/* Articles Container */
+.articles-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between articles */
+  width: 100%;
+  flex-wrap: wrap; /* Responsive wrapping */
+  margin-bottom: 50px;
+}
+
+/* Article Item */
+.article-item {
+  display: flex;
+  flex-direction: column;
+  width: calc(33.33% - 20px); /* Three articles per row */
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-item:hover {
+  transform: translateY(-5px); /* Slight upward movement on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.article-image {
+  width: 100%;
+  height: 280px; /* Fixed height for images */
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.article-content {
+  padding: 15px;
+}
+
+.article-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.article-text {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.read-more-link {
+  display: flex;
+  margin: 0 auto 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  justify-content: center;
+}
+
+.read-more-link:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .article-item {
+    width: calc(50% - 20px); /* Two articles per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .article-item {
+    width: 100%; /* One article per row */
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .article-title {
+    font-size: 16px;
+  }
+
+  .article-text {
+    font-size: 12px;
+  }
+
+  .read-more-link {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  .articles-container {
+    justify-content: center;
+    width: 90%;
+  }
+}
+
+.diver-text {
+  margin-top: -32px;
+}
+.diver-text--text {
+  font-family: Sahel;
+}
+
+/*  */
+/* استایل فوتر */
+.footer-section {
+  background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(20, 20, 20, 1) 100%
+    ),
+    url("https://www.transparenttextures.com/patterns/dark-mosaic.png"); /* طرح بک‌گراند */
+  background-blend-mode: overlay; /* ترکیب گرادیان و طرح */
+  color: #ffffff; /* رنگ متن سفید */
+  padding: 40px 0;
+  text-align: center;
+  direction: ltr;
+}
+
+.footer-container {
+  max-width: 950px; /* حداکثر عرض */
+  margin: 0 auto; /* وسط‌چین */
+  display: flex;
+  justify-content: space-between; /* فضای بین ستون‌ها */
+  gap: 20px; /* فاصله بین ستون‌ها */
+  flex-wrap: wrap; /* برای ریسپانسیو */
+}
+
+.footer-column {
+  flex: 1 1 calc(25% - 40px); /* هر ستون یک‌چهارم عرض */
+  text-align: center;
+  padding-left: 20px;
+}
+
+.footer-title {
+  font-family: "iransansweb", sans-serif;
+  font-size: 20px;
+  color: #ffd700; /* رنگ سبز درخشان */
+  margin-bottom: 15px;
+}
+
+.footer-text {
+  font-family: "iransansweb", sans-serif;
+  font-size: 14px;
+  color: #ffffff; /* رنگ سفید */
+  line-height: 1.5; /* فاصله خطوط */
+  text-align: center;
+  direction: rtl;
+  text-align: justify;
+}
+
+.footer-links {
+  list-style: none; /* حذف نقاط لیست */
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  font-family: "iransansweb", sans-serif;
+  font-size: 14px;
+  color: #ffffff; /* رنگ سفید */
+  text-decoration: none; /* حذف زیرخط */
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffd700; /* رنگ سبز درخشان در هاور */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center; /* وسط‌چین */
+  gap: 15px; /* فاصله بین آیکون‌ها */
+  margin-top: 10px;
+  align-items: center;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #ffffff; /* رنگ سفید */
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #39ff14; /* رنگ سبز درخشان در هاور */
+}
+
+.footer-copyright {
+  margin-top: 40px;
+  font-family: "iransansweb", sans-serif;
+  font-size: 14px;
+  color: #ffffff; /* رنگ سفید */
+}
+
+/* واکنش‌گرایی */
+@media (max-width: 768px) {
+  .footer-column {
+    flex: 1 1 calc(50% - 20px); /* هر ستون نصف عرض */
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-column {
+    flex: 1 1 100%; /* هر ستون تمام عرض */
+    padding: 0px 30px;
+  }
+}
+.foter-text--posishion {
+  text-align: center;
+}
